@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:star_walk/generated/l10n.dart';
-import 'package:star_walk/themes/app_colors.dart';
-import 'package:star_walk/themes/images.dart';
-import 'package:star_walk/themes/text_styles.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:star_walk/screens/onboarding/cubit/onboarding_cubit.dart';
+import 'package:star_walk/screens/onboarding/widget/dot_indicator.dart';
+import 'package:star_walk/screens/onboarding/widget/first_onboarding.dart';
+import 'package:star_walk/screens/onboarding/widget/second_onboarding.dart';
+import 'package:star_walk/screens/onboarding/widget/sky_onboarding%20copy.dart';
+import 'package:star_walk/screens/onboarding/widget/solar_onboarding.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -17,49 +20,28 @@ class _OnboardingState extends State<Onboarding> {
     return Scaffold(
       body: Stack(
         children: [
-          Image(
-            height: MediaQuery.of(context).size.height,
-            image: const AssetImage(Images.imageBackground),
-            fit: BoxFit.cover,
-          ),
-          Positioned(
-            child: SafeArea(
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  'SKY WALK',
-                  style: TxtStyle.h1,
+          BlocBuilder<OnboardingCubit, OnboardingState>(
+            builder: (context, state) {
+              return PageView(
+                reverse: false,
+                onPageChanged: (index) =>
+                    context.read<OnboardingCubit>().indexChanged(index),
+                controller: PageController(
+                  initialPage: 0,
+                  keepPage: false,
+                  viewportFraction: 1,
                 ),
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.15,
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 45),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    width: 30,
-                    child: Divider(color: AppColors.white),
-                  ),
-                  Text(
-                    S.of(context).sky_map,
-                    style: TxtStyle.h1,
-                  ),
-                  const SizedBox(height: 16),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width - 90,
-                    child: Text(
-                      S.of(context).description_app,
-                      style: const TextStyle(color: AppColors.white),
-                    ),
-                  )
+                pageSnapping: true,
+                children: const [
+                  FirestOnboarding(),
+                  SecondOnboarding(),
+                  Onboarding3(),
+                  Onboarding4(),
                 ],
-              ),
-            ),
+              );
+            },
           ),
+          const DotIndicator()
         ],
       ),
     );

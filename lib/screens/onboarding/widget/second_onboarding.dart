@@ -4,8 +4,8 @@ import 'package:star_walk/themes/app_colors.dart';
 import 'package:star_walk/themes/images.dart';
 import 'package:star_walk/themes/text_styles.dart';
 
-class FirstOnboarding extends StatelessWidget {
-  const FirstOnboarding({super.key});
+class SecondOnboarding extends StatelessWidget {
+  const SecondOnboarding({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,12 @@ class FirstOnboarding extends StatelessWidget {
             image: const AssetImage(Images.imageBackground),
             fit: BoxFit.cover,
           ),
-          Positioned(
-            child: SafeArea(
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  'SKY WALK',
-                  style: TxtStyle.h1,
-                ),
+          SafeArea(
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Text(
+                'SKY WALK',
+                style: TxtStyle.h1,
               ),
             ),
           ),

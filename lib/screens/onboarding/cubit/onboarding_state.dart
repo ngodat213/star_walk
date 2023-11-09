@@ -1,6 +1,23 @@
 part of 'onboarding_cubit.dart';
 
-@immutable
-sealed class OnboardingState {}
+class OnboardingState extends Equatable {
+  final int index;
+  const OnboardingState({
+    required this.index,
+  });
 
-final class OnboardingInitial extends OnboardingState {}
+  OnboardingState copyWith({
+    int? index,
+  }) {
+    return OnboardingState(
+      index: index ?? this.index,
+    );
+  }
+
+  factory OnboardingState.initial() {
+    return const OnboardingState(index: 0);
+  }
+
+  @override
+  List<Object> get props => [index];
+}
