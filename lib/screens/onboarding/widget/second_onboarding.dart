@@ -22,7 +22,7 @@ class SecondOnboarding extends StatelessWidget {
               alignment: Alignment.topCenter,
               child: Text(
                 'SKY WALK',
-                style: TxtStyle.h1,
+                style: TxtStyle.h3,
               ),
             ),
           ),
@@ -39,7 +39,7 @@ class SecondOnboarding extends StatelessWidget {
                   ),
                   Text(
                     S.of(context).sky_map,
-                    style: TxtStyle.h1,
+                    style: TxtStyle.h3,
                   ),
                   const SizedBox(height: 16),
                   SizedBox(

@@ -4,8 +4,8 @@ import 'package:star_walk/screens/onboarding/cubit/onboarding_cubit.dart';
 import 'package:star_walk/screens/onboarding/widget/dot_indicator.dart';
 import 'package:star_walk/screens/onboarding/widget/first_onboarding.dart';
 import 'package:star_walk/screens/onboarding/widget/second_onboarding.dart';
-import 'package:star_walk/screens/onboarding/widget/sky_onboarding%20copy.dart';
 import 'package:star_walk/screens/onboarding/widget/solar_onboarding.dart';
+import 'package:star_walk/screens/login/login_screen.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -18,11 +18,11 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          BlocBuilder<OnboardingCubit, OnboardingState>(
-            builder: (context, state) {
-              return PageView(
+      body: BlocBuilder<OnboardingCubit, OnboardingState>(
+        builder: (context, state) {
+          return Stack(
+            children: [
+              PageView(
                 reverse: false,
                 onPageChanged: (index) =>
                     context.read<OnboardingCubit>().indexChanged(index),
@@ -36,13 +36,13 @@ class _OnboardingState extends State<Onboarding> {
                   FirestOnboarding(),
                   SecondOnboarding(),
                   Onboarding3(),
-                  Onboarding4(),
+                  LoginScreen(),
                 ],
-              );
-            },
-          ),
-          const DotIndicator()
-        ],
+              ),
+              state.index != 3 ? const DotIndicator() : Container()
+            ],
+          );
+        },
       ),
     );
   }

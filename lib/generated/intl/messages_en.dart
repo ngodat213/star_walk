@@ -22,11 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("Sky walk"),
+        "app_name": MessageLookupByLibrary.simpleMessage("Star walk"),
+        "astronomical_news":
+            MessageLookupByLibrary.simpleMessage("Astronomical News"),
         "description_app": MessageLookupByLibrary.simpleMessage(
             "Easily find stars, planets and orther celestial objects in the sky above you in real time"),
+        "email_address": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "email_example":
+            MessageLookupByLibrary.simpleMessage("hydra@example.com"),
         "extension_info":
             MessageLookupByLibrary.simpleMessage("Extension Infomation"),
+        "login": MessageLookupByLibrary.simpleMessage("Login to Star Walk"),
+        "login_title": MessageLookupByLibrary.simpleMessage(
+            "Nuture your mind, Unite im meditation"),
+        "main_screen_title": MessageLookupByLibrary.simpleMessage(
+            "All you need to unravel the mysteries of the night day."),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_title":
+            MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "signup_title": MessageLookupByLibrary.simpleMessage(""),
         "sky_description": MessageLookupByLibrary.simpleMessage(
             "Allow you stargazing to be as simple or advenced as you desire."),
         "sky_live": MessageLookupByLibrary.simpleMessage("Sky Live"),
@@ -35,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sky_map": MessageLookupByLibrary.simpleMessage("Sky map"),
         "solar_description": MessageLookupByLibrary.simpleMessage(
             "Learn about the object that you see in the sky, explore their internal structure and 3D models"),
-        "solar_system": MessageLookupByLibrary.simpleMessage("Solar System")
+        "solar_system": MessageLookupByLibrary.simpleMessage("Solar System"),
+        "space_now": MessageLookupByLibrary.simpleMessage("Space is Now")
       };
 }

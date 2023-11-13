@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Sky walk`
+  /// `Star walk`
   String get app_name {
     return Intl.message(
-      'Sky walk',
+      'Star walk',
       name: 'app_name',
       desc: '',
       args: [],
@@ -135,6 +135,116 @@ class S {
     return Intl.message(
       'Allow you stargazing to be as simple or advenced as you desire.',
       name: 'sky_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login to Star Walk`
+  String get login {
+    return Intl.message(
+      'Login to Star Walk',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nuture your mind, Unite im meditation`
+  String get login_title {
+    return Intl.message(
+      'Nuture your mind, Unite im meditation',
+      name: 'login_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signup {
+    return Intl.message(
+      'Sign Up',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get signup_title {
+    return Intl.message(
+      '',
+      name: 'signup_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get email_address {
+    return Intl.message(
+      'Email Address',
+      name: 'email_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `hydra@example.com`
+  String get email_example {
+    return Intl.message(
+      'hydra@example.com',
+      name: 'email_example',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your password`
+  String get password_title {
+    return Intl.message(
+      'Enter your password',
+      name: 'password_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All you need to unravel the mysteries of the night day.`
+  String get main_screen_title {
+    return Intl.message(
+      'All you need to unravel the mysteries of the night day.',
+      name: 'main_screen_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Astronomical News`
+  String get astronomical_news {
+    return Intl.message(
+      'Astronomical News',
+      name: 'astronomical_news',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Space is Now`
+  String get space_now {
+    return Intl.message(
+      'Space is Now',
+      name: 'space_now',
       desc: '',
       args: [],
     );

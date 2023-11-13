@@ -14,6 +14,7 @@ class AppColors {
   static const Color label = Color(0xFF636363);
   static const Color input = Color(0xFF313131);
   static const Color star = Color(0xFFFFD23D);
+  static const Color black = Colors.black;
 
   static List<BoxShadow> shadow = [
     BoxShadow(

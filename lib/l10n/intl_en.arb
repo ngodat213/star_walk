@@ -1,5 +1,5 @@
 {
-    "app_name": "Sky walk",
+    "app_name": "Star walk",
     "description_app": "Easily find stars, planets and orther celestial objects in the sky above you in real time",
     "sky_map": "Sky map",
     "solar_system":"Solar System",
@@ -7,5 +7,16 @@
     "solar_description": "Learn about the object that you see in the sky, explore their internal structure and 3D models",
     "sky_live": "Sky Live",
     "sky_live_info": "Customized Astronomy Expenrience",
-    "sky_description": "Allow you stargazing to be as simple or advenced as you desire."
+    "sky_description": "Allow you stargazing to be as simple or advenced as you desire.",
+    "login": "Login to Star Walk",
+    "login_title": "Nuture your mind, Unite im meditation",
+    "signup": "Sign Up",
+    "signup_title": "",
+    "email_address": "Email Address",
+    "email_example": "hydra@example.com",
+    "password": "Password",
+    "password_title": "Enter your password",
+    "main_screen_title": "All you need to unravel the mysteries of the night day.",
+    "astronomical_news": "Astronomical News",
+    "space_now": "Space is Now"
 }

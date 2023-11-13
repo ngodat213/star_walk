@@ -5,7 +5,7 @@ import 'package:star_walk/bloc_observer.dart';
 import 'package:star_walk/generated/l10n.dart';
 import 'package:star_walk/l10n/support_locale.dart';
 import 'package:star_walk/manager/manager_provider.dart';
-import 'package:star_walk/screens/onboarding/onboarding.dart';
+import 'package:star_walk/screens/constallation/constallation_screen.dart';
 
 Future<void> main() {
   return BlocOverrides.runZoned(
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const Onboarding(),
+        home: const ConstallationScreen(),
       ),
     );
   }
